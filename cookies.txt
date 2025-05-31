@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.replit.com	TRUE	/	FALSE	1999999999	__cf_bm	rR1WmJTH5Q_PqrXeejgC8cD6any_2BGHtuuzbFHJYq4-1748711587-1.0.1.1-l7mm6z2I.qvHipCHCH5ENZ_ZJ9QMStoCzLRlch_hefAIEvuMbQIHV33vG.d34yWKBtSQhulZxlEzO1P17XAZlffxJq9NIm56DWK5hcBB42U
+cdn.replit.com	TRUE	/	FALSE	1999999999	SameSite	None
+
